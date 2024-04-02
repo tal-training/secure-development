@@ -1,1 +1,5 @@
-# secure-development
+# Secure Development Course
+
+- Course Notes
+- Presentations
+- Exercises
