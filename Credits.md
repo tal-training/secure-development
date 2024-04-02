@@ -1,4 +1,4 @@
-For Notes:
+#### For the notes:
 
-Prompts: Tal
-Content: Mistral LLM
+- Prompts: Tal
+- Content: Mistral LLM
