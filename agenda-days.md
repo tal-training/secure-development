@@ -4,7 +4,7 @@
 
 - Principles of Secure Development
 
-- Security Design Principlesee
+- Security Design Principles
 
 ### Day 2
 
