@@ -1,50 +1,27 @@
-### Confidentiality Exercises
+### OWASP Top-10 Exercises
 
-##### Exercise: Simple Data Encryption
+##### Exercise: Broken Access Control
 
-1. Use a standard encryption library to encrypt some text and save it in a file.
+1. Read the [description of OWASP A01](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
 
-2. How can you decrypt the data?
+1. Least Privilege: 
 
-3. Write a program to decrypt the encrypted file. You need to store the key or ask the user to store it. 
+2. URL Bypass
 
-4. Where should you store the key?
+3. ID abuse
+
+4. All endpoint authenticated
+
+5. Cannot elevate privileges
+
+6. Verify tokens/cookies
+
+7. CORS 
 
 
-##### Exercise: Secure password storage
+4. You have to design and implement user registration functionality. How would you do it without breaking access control?
 
-1. Create a simple script that asks the user to choose a password and store it in a file. Use a secure method to store the passwords (e.g. hashing).
-
-2. How can you use the hashed password to authenticate the user?
-
-##### Exercise: Secrets in code
-
-Following is the source code for a function that connects to an API using a secret API key. How can you protect the key so it is not stored in cleartext in the source file?
-
-```python
-def fetch_weather(API_KEY, city):
-    url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
-    response = requests.get(url)
-    weather_data = response.json()
-    return weather_data
-
-API_KEY = 'b1b15e88fa797225412429c1c50c122a1'
-city = 'New York' 
-
-weather_data = fetch_weather(api_key, city)
-```
-
-##### Exercise: Protecting Patient Records in Web App
-
-1. Run the project from the command line terminal: 
-
-```bash
-flask run
-```
-
-2. Open [Test App](http://127.0.0.1:5000/). 
-
-3. Can you get other patient names?
+3. What principle is violated ?
 
 4. What other information about the patients can you get?
 
