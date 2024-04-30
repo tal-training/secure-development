@@ -1,4 +1,4 @@
-from flask import Flask, send_file
+from flask import Flask, send_file, request
 from faker import Faker
 import sqlite3
 import json
@@ -23,10 +23,10 @@ def create_fake_data(num=100):
 def home():
     return send_file("static/index.html")
     
-
+# http://127.0.0.1:5000/api/data?id=1%27%20union%20select%20*%20from%20data--
 @app.route('/api/data')
 def get_all_data():
-    return json.dumps(query("SELECT * FROM data"))
+    return json.dumps(query(f"SELECT * FROM data where id='{request.args['id']}'"))
 
 if __name__=="__main__":
     create_fake_data()
